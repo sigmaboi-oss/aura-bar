@@ -1,0 +1,304 @@
+<style>
+/* 🔥 GLOBAL ANIMATIONS */
+@keyframes infernoGlow {
+  0% {
+    box-shadow: 0 0 12px #ff3c00,
+                0 0 25px #ff6a00;
+  }
+  50% {
+    box-shadow: 0 0 30px #ff3c00,
+                0 0 60px #ff6a00,
+                0 0 100px #ff0000;
+  }
+  100% {
+    box-shadow: 0 0 12px #ff3c00,
+                0 0 25px #ff6a00;
+  }
+}
+
+@keyframes flameText {
+  0% {
+    text-shadow:
+      0 0 5px #ff3c00,
+      0 0 10px #ff6a00;
+    transform: scale(1);
+  }
+
+  50% {
+    text-shadow:
+      0 0 10px #ff3c00,
+      0 0 25px #ff6a00,
+      0 0 50px #ff0000;
+    transform: scale(1.04);
+  }
+
+  100% {
+    text-shadow:
+      0 0 5px #ff3c00,
+      0 0 10px #ff6a00;
+    transform: scale(1);
+  }
+}
+
+@keyframes fireBorder {
+  0% {
+    border-color: #ff3c00;
+  }
+  50% {
+    border-color: #ffae00;
+  }
+  100% {
+    border-color: #ff3c00;
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulseBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 🔥 MAIN CONTAINER */
+.inferno-wrap {
+  max-width: 390px;
+  margin: auto;
+  padding: 16px 14px;
+  background: linear-gradient(145deg,#0f0000,#1a0000,#120000);
+  background-size: 400% 400%;
+  animation: pulseBg 8s ease infinite;
+  color: #ffd6b3;
+  font-family: Georgia, serif;
+  border-radius: 20px;
+  box-shadow: 0 0 40px #ff3c00;
+}
+
+/* 🔥 CARD */
+.inferno-card {
+  transition: all .5s ease;
+  padding: 18px;
+  background: rgba(20,0,0,.95);
+  border: 1px solid #ff3c00;
+  border-radius: 16px;
+  margin-bottom: 14px;
+  animation:
+    infernoGlow 3s infinite ease-in-out,
+    fireBorder 3s infinite ease-in-out;
+}
+
+.inferno-card:hover {
+  transform: scale(1.03);
+}
+
+/* 🔥 TITLE */
+.inferno-title {
+  color: #ffae00;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  animation: flameText 2s infinite ease-in-out;
+}
+
+/* 🔥 DIVIDER */
+.fire-divider {
+  height: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,120,0,.9),
+    #ff3c00,
+    rgba(255,120,0,.9),
+    transparent
+  );
+  background-size: 300% 100%;
+  animation: pulseBg 4s linear infinite;
+}
+
+/* 🔥 PROFILE IMAGE */
+.fire-avatar {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 3px solid #ff3c00;
+  box-shadow:
+    0 0 15px #ff3c00,
+    0 0 35px #ff6a00;
+  animation:
+    infernoGlow 2.5s infinite ease-in-out,
+    floating 3s infinite ease-in-out;
+}
+
+/* 🔥 BUTTON */
+.fire-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: linear-gradient(45deg,#ffae00,#ff3c00,#ff0000);
+  background-size: 300% 300%;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  animation:
+    pulseBg 4s infinite linear,
+    infernoGlow 2s infinite ease-in-out;
+  transition: .4s;
+}
+
+.fire-btn:hover {
+  transform: scale(1.08);
+}
+
+/* 🔥 IMAGES */
+.fire-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow:
+    0 0 20px #ff3c00,
+    0 0 50px rgba(255,60,0,.8);
+  animation: floating 4s infinite ease-in-out;
+}
+
+/* 🔥 SMALL TEXT */
+.glow-text {
+  color: #ffae00;
+  text-shadow:
+    0 0 5px #ff3c00,
+    0 0 15px #ff6a00;
+}
+</style>
+
+<div class="inferno-wrap">
+
+  <!-- 🔥 TITLE -->
+  <div class="inferno-card" style="text-align:center;">
+    <div class="inferno-title">
+      🔥 Inferno Legion 🔥
+    </div>
+
+    <hr style="border:none;height:2px;margin:12px 0;
+    background:linear-gradient(90deg,transparent,#ff6a00,#ff3c00,#ff6a00,transparent);">
+
+    <div class="glow-text" style="font-size:12px;">
+      Est. 1 Feb, 2026
+    </div>
+  </div>
+
+  <div class="fire-divider"></div>
+
+  <!-- 🔥 OWNER -->
+  <div class="inferno-card" style="text-align:center;">
+
+    <img
+      class="fire-avatar"
+      src="https://i.imgur.com/ctpKyZF.png"
+    >
+
+    <div style="
+      margin-top:10px;
+      font-weight:bold;
+      color:#fff3d1;
+      text-shadow:0 0 12px #ff3c00;">
+      Sehantdenumesh2015
+    </div>
+
+    <div style="
+      font-size:11px;
+      padding:5px 12px;
+      display:inline-block;
+      margin:8px 0;
+      border-radius:8px;
+      background:linear-gradient(90deg,#ff3c00,#ffae00);
+      color:#000;
+      font-weight:bold;">
+      Founder & Leader
+    </div>
+
+    <div style="font-size:12px;color:#ffd6b3;">
+      “Every move is a spark — ignite the board.”
+    </div>
+  </div>
+
+  <div class="fire-divider"></div>
+
+  <!-- 🔥 THEME SONG -->
+  <div class="inferno-card" style="text-align:center;">
+
+    <div class="glow-text" style="
+      font-weight:bold;
+      margin-bottom:12px;">
+      🎵 THEME SONG
+    </div>
+
+    <a
+      class="fire-btn"
+      href="https://youtu.be/2LOmFBBq4T0">
+      ▶ Play
+    </a>
+
+    <div style="
+      margin-top:8px;
+      font-size:12px;
+      color:#ffae00;">
+      (Opens in tab)
+    </div>
+  </div>
+
+  <div class="fire-divider"></div>
+
+  <!-- 🔥 GAME -->
+  <div class="inferno-card" style="text-align:center;">
+
+    <div class="glow-text" style="font-weight:bold;">
+      🎮 GAME OF THE MONTH
+    </div>
+
+    <img
+      class="fire-img"
+      src="https://i.imgur.com/lNNLbZk.gif"
+      style="margin:12px 0;"
+    >
+
+    <div style="
+      font-size:12px;
+      color:#ff6a00;">
+      Chosen by the Inferno Council
+    </div>
+  </div>
+
+  <!-- 🔥 LOGO -->
+  <div class="inferno-card" style="text-align:center;">
+
+    <div class="glow-text" style="font-weight:bold;">
+      CLUB LOGO
+    </div>
+
+    <img
+      class="fire-img"
+      src="https://i.imgur.com/vCTFkVT.png"
+      style="margin-top:12px;"
+    >
+
+  </div>
+
+</div>
